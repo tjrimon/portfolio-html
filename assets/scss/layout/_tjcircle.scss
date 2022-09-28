@@ -1,0 +1,40 @@
+@use '../utils' as *;
+
+// tjcircle starts here
+.tjcircle {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 50px;
+    transition: .3s;
+
+    @media #{$lg} {
+        width: 175px;
+        height: 175px;
+        padding-top: 33px;
+    }
+
+    &__content span {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 24px;
+        display: inline-block;
+    }
+
+    &__title {
+        font-size: 15px;
+        margin-bottom: 0;
+        line-height: 24px;
+        font-weight: 600;
+    }
+
+    &__icon {
+        margin-bottom: 25px;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}

@@ -1,0 +1,123 @@
+@use '../utils' as *;
+
+.hero-area {
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.tjhero {
+    &__title {
+        font-size: 70px;
+        font-weight: 800;
+        color: #0f1432;
+
+        @media #{$lg} {
+            font-size: 55px;
+        }
+
+        & span {
+            color: #692ffd;
+        }
+    }
+
+    & p {
+        font-size: 18px;
+        line-height: 28px;
+        color: #4f5158;
+    }
+
+    &__btn {}
+
+    @media #{$md} {
+        margin: 40px 0;
+    }
+}
+
+.hero-img {
+    & img {
+        margin-left: -40px;
+
+        @media #{$xl,$lg,$md} {
+            margin: 0;
+        }
+
+        @media #{$lg,$md,$sm} {
+            max-width: 100%;
+        }
+    }
+
+    & .hero-big-circle {
+        position: absolute;
+        height: 400px;
+        width: 400px;
+        background: #FE5251;
+        top: 155px;
+        left: -87px;
+        z-index: -1;
+        border-radius: 50%;
+
+        @media #{$xl,$lg,$md} {
+            left: 0;
+        }
+    }
+}
+
+.hero-big-circle-2 {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    z-index: -1;
+}
+
+.hero-all-shape {
+    & .hero-shape {
+        position: absolute;
+    }
+
+    & .sm-circle {
+        top: 160px;
+        left: 170px;
+
+        @media #{$md} {
+            top: 100px;
+            left: 20px;
+        }
+    }
+
+    & .sm-triangle {
+        top: 300px;
+        left: 210px;
+
+        @media #{$md} {
+            bottom: 40px;
+            left: 20px;
+            top: auto;
+        }
+    }
+
+    & .sm-cross {
+        top: 170px;
+        right: 200px;
+
+        @media #{$md} {
+            top: 120px;
+            right: 50px;
+        }
+    }
+
+    & .sm-triangle-2 {
+        bottom: 250px;
+        right: 215px;
+
+        @media #{$md} {
+            bottom: 230px;
+            right: 50px;
+        }
+    }
+
+    & .dot-shape {
+        bottom: 100px;
+        right: 0;
+    }
+
+}

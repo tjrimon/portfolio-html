@@ -1,0 +1,165 @@
+@use '../utils' as *;
+
+
+
+.header-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.main-menu {
+    margin-left: 110px;
+
+    & ul {
+        & li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 45px;
+            position: relative;
+
+            @media #{$lg} {
+                margin-right: 20px;
+            }
+
+            & a {
+                font-size: 14px;
+                line-height: 1;
+                color: #4f5158;
+                padding: 33px 0;
+                display: block;
+            }
+
+            &:hover {
+                >a {
+                    color: #692ffd;
+                }
+
+                >.sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+
+
+            & .sub-menu {
+                position: absolute;
+                width: 230px;
+                background: #EEF3F7;
+                padding: 20px 0;
+                transition: .3s;
+                top: 110%;
+                left: 0;
+                z-index: 9999;
+                opacity: 0;
+                visibility: hidden;
+
+                & li {
+                    margin: 0;
+                    display: block;
+
+                    & a {
+                        padding: 12px 25px;
+                    }
+
+                    & .sub-menu {
+                        left: 101%;
+                        top: 100%;
+
+                    }
+
+                    &:hover {
+                        &>.sub-menu {
+                            top: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.side-toggle {
+    & button {
+        font-size: 13px;
+        font-weight: 500;
+        color: #4f5158;
+        letter-spacing: 3px;
+        line-height: 1;
+    }
+}
+
+.tj-side-info {
+    position: fixed;
+    width: 400px;
+    right: 0;
+    height: 100%;
+    top: 0;
+    background: #eef3f7;
+    z-index: 9999;
+    padding: 25px;
+    overflow-y: scroll;
+}
+
+.tj-side-logo {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tj-side-content>ul>li {
+    list-style: none;
+    padding: 6px 0;
+}
+
+.tj-side-content p {
+    font-size: 16px;
+    color: #333333;
+}
+
+.tj-side-logo button {
+    color: #afbac4;
+    font-size: 20px;
+}
+
+.tj-side-logo a {}
+
+.tj-side-info {
+    position: fixed;
+    width: 400px;
+    right: -100%;
+    height: 100%;
+    top: 0;
+    background: #eef3f7;
+    z-index: 999999;
+    padding: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+}
+
+.tj-side-info.tj-side-info-open {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.offcanvas-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+    transition: 1s;
+
+}
+
+.offcanvas-overlay.offcanvas-overlay-open {
+    opacity: 0.5;
+    visibility: visible;
+}

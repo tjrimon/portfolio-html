@@ -1,0 +1,139 @@
+@use '../utils' as *;
+
+.timeline-title {
+    & .tj-section-title {
+        font-size: 50px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+.tjtimeline {
+    padding: 25px 0px 15px 35px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #0eafd6;
+        opacity: 0;
+        visibility: hidden;
+        top: 0;
+        border-radius: 8px 0 0 8px;
+        transition: .3s;
+    }
+
+    &:hover {
+        &::before {
+            background: #0eafd6;
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
+
+        box-shadow: 0px 20px 40px 0px rgba(23, 3, 64, 0.06);
+    }
+
+    &--2 {
+        & .tjtimeline__content {
+            & span {
+                color: #692ffd;
+            }
+        }
+
+        & .tjtimeline__year {
+            & span {
+                color: #692ffd;
+                background-color: #F3EFFF;
+            }
+        }
+
+        &:hover {
+            &::before {
+                background: #692ffd;
+            }
+        }
+    }
+
+    &--3 {
+        & .tjtimeline__content {
+            & span {
+                color: #ff9a00;
+            }
+        }
+
+        & .tjtimeline__year {
+            & span {
+                color: #ff9a00;
+                background-color: #FFF7EB;
+            }
+        }
+
+        &:hover {
+            &::before {
+                background: #ff9a00;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 0px;
+    }
+
+    &__content {
+        transition: .3s;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+            color: #0eafd6;
+            line-height: 24px;
+            display: inline-block;
+            margin-bottom: 13px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #4f5158;
+            line-height: 22px;
+        }
+    }
+
+    &__year {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        & span {
+            display: inline-block;
+            font-size: 13px;
+            line-height: 24px;
+            font-weight: 500;
+            padding: 10px 12px;
+            color: #0eafd6;
+            background-color: #ECF9FC;
+            border-radius: 3px;
+        }
+    }
+
+}
+
+.exp-img img {
+    margin-top: -30px;
+
+    @media #{$xl,$lg,$md,$sm} {
+        max-width: 100%;
+    }
+
+    @media #{$lg,$md,$sm} {
+        margin: 0;
+    }
+}

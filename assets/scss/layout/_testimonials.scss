@@ -1,0 +1,111 @@
+@use '../utils/' as *;
+
+.bg-blue {
+    background-color: #382ABF;
+}
+
+.testimonial-box {
+    border-radius: 25px;
+}
+
+.testimonial-shape-1 img {
+    position: absolute;
+    top: 70px;
+    left: 120px;
+}
+
+.testimonial-shape-2 img {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+
+.testimonial-shape-3 img {
+    position: absolute;
+    bottom: 0;
+    right: 300px;
+}
+
+.tjtestimonial {
+    z-index: 2;
+    position: relative;
+
+    &__content {
+        & p {
+            font-size: 26px;
+            line-height: 44px;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__brand {
+        margin-bottom: 40px;
+    }
+
+    &__info {
+        margin-left: 10px;
+
+        & h4 {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+
+        & span {
+            color: #ffffff;
+            font-size: 13px;
+            line-height: 20px;
+            display: inline-block;
+        }
+    }
+}
+
+.testimonial-active {
+    & .slick-arrow {
+        color: white;
+        height: 60px;
+        width: 60px;
+        border: 2px solid #6055CC;
+        border-radius: 50%;
+        position: absolute;
+        left: -90px;
+        top: 40%;
+        transition: .3s;
+
+        &.slick-next {
+            left: auto;
+            right: -90px;
+            top: 41%;
+        }
+
+        &:hover {
+            color: #7B48FD;
+            background-color: #fff;
+            border-color: transparent;
+            transform: scale(1.2);
+        }
+    }
+
+    & .slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+
+        & li {
+            font-size: 0px;
+            height: 10px;
+            width: 10px;
+            background: #887FD9;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 50%;
+
+            &.slick-active {
+                background-color: #fff;
+            }
+        }
+    }
+}

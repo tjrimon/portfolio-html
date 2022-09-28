@@ -1,0 +1,1 @@
+sass --watch c:\Users\tjrim\OneDrive\Desktop\html-project\portfolio\assets\scss\main.scss:c:\Users\tjrim\OneDrive\Desktop\html-project\portfolio\assets\css\core.css

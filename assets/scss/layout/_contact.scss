@@ -1,0 +1,106 @@
+@use '../utils/' as *;
+
+.contact-title .tj-subtitle {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-title .tj-section-title {
+    font-size: 50px;
+    margin-bottom: 25px;
+}
+
+.contact-title p {
+    font-size: 16px;
+}
+
+.tjcontact {
+    border-bottom: 1px solid #ecedef;
+    margin-right: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.tjcontact__content {
+    margin-left: 30px;
+}
+
+.tjcontact__content h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.tjcontact__content p {
+    font-size: 13px;
+    line-height: 1;
+    color: #4f5158;
+}
+
+.tjcontact-form input,
+.tjcontact-form textarea {
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.tjcontact-form textarea {
+    height: 140px;
+    resize: none;
+    line-height: 50px;
+    border-radius: 20px;
+}
+
+.tjcontact-form p {
+    font-size: 14px;
+    color: #4f5158;
+    line-height: 22px;
+}
+
+.tjcontact-form .tj-btn {
+    margin-top: 20px;
+}
+
+.tjcontact-form input {
+    height: 55px;
+}
+
+.tjcontact-form input:focus,
+.tjcontact-form textarea:focus {
+    border-color: #692ffd;
+}
+
+.tjcontact-form {
+    padding: 70px;
+    background: #eef3f7;
+    border-radius: 10px;
+
+    @media #{$lg} {
+        padding: 45px;
+    }
+}
+
+.tjcontact-form input:focus::-moz-placeholder,
+.tjcontact-form textarea:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+.tjcontact-form input:focus::placeholder,
+.tjcontact-form textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.tjcontact-form input,
+.tjcontact-form textarea {
+    @include tp-placeholder {
+        color: #4f5158;
+        font-size: 13px;
+        font-weight: 300;
+    }
+}
