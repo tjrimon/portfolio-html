@@ -84,6 +84,14 @@
     @media #{$lg} {
         padding: 45px;
     }
+
+    @media #{$sm} {
+        padding: 70px 50px;
+    }
+
+    @media #{$xs} {
+        padding: 50px 20px;
+    }
 }
 
 .tjcontact-form input:focus::-moz-placeholder,

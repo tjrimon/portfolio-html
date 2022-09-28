@@ -5,6 +5,10 @@
     padding: 55px 100px 25px;
     border-radius: 30px;
     box-shadow: 0px 40px 60px 0px rgba(41, 1, 140, 0.2);
+
+    @media #{$xs,$sm} {
+        padding: 80px 20px 80px 30px;
+    }
 }
 
 .about-bottom-bg {
@@ -32,6 +36,14 @@
     position: absolute;
     top: 0;
     right: 300px;
+
+    @media #{$sm} {
+        right: 30px;
+    }
+
+    @media #{$xs} {
+        right: 20px;
+    }
 }
 
 .tjabout {

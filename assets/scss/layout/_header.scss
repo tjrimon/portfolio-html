@@ -139,6 +139,10 @@
     visibility: hidden;
     opacity: 0;
     transition: 1s;
+
+    @media #{$xs} {
+        width: 330px;
+    }
 }
 
 .tj-side-info.tj-side-info-open {

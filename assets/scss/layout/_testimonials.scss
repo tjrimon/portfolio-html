@@ -12,23 +12,37 @@
     position: absolute;
     top: 70px;
     left: 120px;
+
+    @media #{$xs,$sm} {
+        left: 20px;
+
+    }
 }
 
 .testimonial-shape-2 img {
     position: absolute;
     top: 70px;
     right: 0;
+
 }
 
 .testimonial-shape-3 img {
     position: absolute;
     bottom: 0;
     right: 300px;
+
+    @media #{$xs,$sm} {
+        right: 60px;
+    }
 }
 
 .tjtestimonial {
     z-index: 2;
     position: relative;
+
+    @media #{$xs,$sm} {
+        padding: 0 20px;
+    }
 
     &__content {
         & p {
@@ -36,6 +50,11 @@
             line-height: 44px;
             color: #ffffff;
             margin-bottom: 40px;
+
+            @media #{$xs,$sm} {
+                font-size: 17px;
+                line-height: 28px;
+            }
         }
     }
 
@@ -93,6 +112,10 @@
         position: absolute;
         right: 0;
         bottom: 10px;
+
+        @media #{$xs,$sm} {
+            right: 20px;
+        }
 
         & li {
             font-size: 0px;

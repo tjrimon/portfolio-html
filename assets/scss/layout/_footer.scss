@@ -21,6 +21,10 @@
 }
 
 .tj-contact-info {
+    @media #{$sm,$xs} {
+        margin-bottom: 20px;
+    }
+
     & h4 {
         font-size: 20px;
         font-weight: 600;
@@ -166,6 +170,10 @@
 .tj-copyright {
     & p {
         margin-bottom: 0;
+
+        @media #{$xs,$sm} {
+            text-align: center;
+        }
     }
 }
 

@@ -3,7 +3,7 @@
 .timeline-title {
     & .tj-section-title {
         font-size: 50px;
-        line-height: 24px;
+        line-height: 1.1;
         margin-bottom: 30px;
     }
 }
@@ -14,6 +14,10 @@
     border-radius: 5px;
     margin-bottom: 25px;
     background: #FFFFFF;
+
+    @media #{$xs,$sm} {
+        padding-right: 15px;
+    }
 
     &:before {
         content: "";
@@ -112,6 +116,12 @@
         top: 30px;
         right: 30px;
 
+        @media #{$xs,$sm} {
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+
         & span {
             display: inline-block;
             font-size: 13px;
@@ -126,14 +136,20 @@
 
 }
 
-.exp-img img {
-    margin-top: -30px;
-
-    @media #{$xl,$lg,$md,$sm} {
-        max-width: 100%;
+.exp-img {
+    @media #{$sm,$xs} {
+        margin: 0;
     }
 
-    @media #{$lg,$md,$sm} {
-        margin: 0;
+    & img {
+        margin-top: -30px;
+
+        @media #{$xl,$lg,$md,$sm,$xs} {
+            max-width: 100%;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            margin: 0;
+        }
     }
 }

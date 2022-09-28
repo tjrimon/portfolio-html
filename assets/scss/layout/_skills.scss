@@ -14,7 +14,7 @@
 
 .tj-section-title {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 1.1;
     font-weight: 800;
 }
 
@@ -40,7 +40,7 @@
 .gx-70 {
     --bs-gutter-x: 70px;
 
-    @media #{$lg} {
+    @media #{$lg,$md,$xs,$sm} {
         --bs-gutter-x: 30px;
     }
 }
@@ -48,9 +48,18 @@
 .tjskill {
     margin-bottom: 100px;
 
+    @media #{$xs,$sm} {
+        margin-bottom: 50px;
+    }
+
+
     &__thumb {
         & img {
             margin-bottom: 40px;
+
+            @media #{$xs,$sm} {
+                margin-bottom: 20px;
+            }
         }
     }
 

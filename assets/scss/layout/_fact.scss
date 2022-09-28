@@ -40,7 +40,7 @@
             border-radius: 0 20px 20px 0;
             border-right: none;
 
-            @media #{$md} {
+            @media #{$md,$xs,$sm} {
                 border-radius: 0;
                 border-right: 4px solid #eef3f7;
             }
@@ -51,7 +51,7 @@
         & .tj-funfact {
             border-radius: 20px 0 0 20px;
 
-            @media #{$md} {
+            @media #{$md,$xs,$sm} {
                 border-radius: 0;
             }
         }
@@ -68,7 +68,7 @@
         left: 100px;
     }
 
-    @media #{$md} {
+    @media #{$md,$sm,$xs} {
         top: 50px;
         left: 20px;
     }

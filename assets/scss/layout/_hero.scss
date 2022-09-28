@@ -15,6 +15,10 @@
             font-size: 55px;
         }
 
+        @media #{$xs,$sm} {
+            font-size: 40px;
+        }
+
         & span {
             color: #692ffd;
         }
@@ -37,11 +41,11 @@
     & img {
         margin-left: -40px;
 
-        @media #{$xl,$lg,$md} {
+        @media #{$xl,$lg,$md,$sm,$xs} {
             margin: 0;
         }
 
-        @media #{$lg,$md,$sm} {
+        @media #{$lg,$md,$sm,$xs} {
             max-width: 100%;
         }
     }
@@ -56,8 +60,13 @@
         z-index: -1;
         border-radius: 50%;
 
-        @media #{$xl,$lg,$md} {
+        @media #{$xl,$lg,$md,$sm,$xs} {
             left: 0;
+        }
+
+        @media #{$sm,$xs} {
+            height: 300px;
+            width: 300px;
         }
     }
 }
@@ -82,6 +91,18 @@
             top: 100px;
             left: 20px;
         }
+
+        @media #{$sm} {
+            top: 140px;
+            left: auto;
+            right: 100px;
+        }
+
+        @media #{$xs} {
+            top: 140px;
+            left: auto;
+            right: 20px;
+        }
     }
 
     & .sm-triangle {
@@ -93,6 +114,18 @@
             left: 20px;
             top: auto;
         }
+
+        @media #{$sm} {
+            top: 260px;
+            left: auto;
+            right: 100px;
+        }
+
+        @media #{$xs} {
+            top: 260px;
+            left: auto;
+            right: 5px;
+        }
     }
 
     & .sm-cross {
@@ -102,6 +135,11 @@
         @media #{$md} {
             top: 120px;
             right: 50px;
+        }
+
+        @media #{$xs,$sm} {
+            top: 350px;
+            right: 90px;
         }
     }
 
